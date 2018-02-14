@@ -7,7 +7,7 @@ node ('master'){
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-    app = docker.build("grvdeep/testnginx")
+    app = docker.build("gdeepgd/testnginx")
     }
 
     stage('Test image') {
