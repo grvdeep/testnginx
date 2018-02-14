@@ -20,7 +20,7 @@ node ('master'){
     }    
     
     stage('Push image')
-    { docker.withRegistry('https://registry.hub.docker.com/', 'c7cf7d45-89ef-4453-8aa4-b6d89c92671d') {
+    { docker.withRegistry('https://registry.hub.docker.com/', 'cd29003c-fad0-416f-9984-60eacc03bb2c') {
         app.push("${env.BUILD_NUMBER}")
         app.push("latest")
     }
