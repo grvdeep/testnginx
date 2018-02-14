@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM onlinelabs/ubuntu
+FROM ubuntu
 
 # Install Nginx.
 RUN \
