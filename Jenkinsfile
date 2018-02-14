@@ -7,7 +7,7 @@ node ('master'){
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-    app = docker.build("gdeepgd/nginxproject")
+    app = docker.build("yogeshdeepti/nginxproject")
     }
 
     stage('Test image') {
@@ -20,7 +20,7 @@ node ('master'){
     }    
     
     stage('Push image')
-    { docker.withRegistry('https://registry.hub.docker.com/', 'cd29003c-fad0-416f-9984-60eacc03bb2c') {
+    { docker.withRegistry('https://registry.hub.docker.com/', 'af190493-b597-4d75-a198-a53bd16c00d9') {
         app.push("${env.BUILD_NUMBER}")
         app.push("latest")
     }
