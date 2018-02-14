@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM xqdocker/ubuntu-nginx
 
 # Install Nginx.
 RUN \
