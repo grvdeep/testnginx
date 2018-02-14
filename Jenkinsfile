@@ -10,14 +10,14 @@ node ('master'){
     app = docker.build("yogeshdeepti/nginxproject")
     }
 
-    stage('Test image') {
+    /*stage('Test image') {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Volkswagen-type approach ;-) */
 
-        app.inside {
+      /*  app.inside {
             sh 'echo "Tests passed"'
         }
-    }    
+    }   */ 
     
     stage('Push image')
     { docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
