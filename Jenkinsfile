@@ -20,7 +20,7 @@ node ('master'){
     }    
     
     stage('Push image')
-    { docker.withRegistry('https://registry.hub.docker.com/gdeepgd', 'c7cf7d45-89ef-4453-8aa4-b6d89c92671d') {
+    { docker.withRegistry('https://registry.hub.docker.com/gdeepgd', 'af190493-b597-4d75-a198-a53bd16c00d9') {
         app.push("${env.BUILD_NUMBER}")
         app.push("latest")
     }
